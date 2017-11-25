@@ -21,7 +21,7 @@ export class FooterComponent implements OnInit {
   }
   clearBtn() {
     this.removeEvent.emit();
-    console.log(this.todos);
+    // console.log(this.todos);
   }
   changefilterType(type) {
     this.filterType = type;
