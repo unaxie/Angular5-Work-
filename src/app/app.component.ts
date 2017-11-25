@@ -18,12 +18,12 @@ export class AppComponent {
   // }
   addTodos() {
     if (this.todo) {
-      this.todos.push(this.todo);
       let newTodo = {
         text : this.todo,
-        done : '',
+        done : false,
       };
+      this.todos.push(newTodo);
+      this.todo = '';
     }
-    this.todo = '';
   }
 }
