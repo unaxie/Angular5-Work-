@@ -9,8 +9,8 @@ export class AppComponent {
   inputHint= 'What needs to be done? 呀蛤～';
   todos = [];
 
-  addtodos(value) {
-    console.log('trytryla');
-    this.todos = value;
+  addTodos(target:HTMLInputElement) {
+    console.log(target.value);
+    this.todos.push(target.value);
   }
 }
