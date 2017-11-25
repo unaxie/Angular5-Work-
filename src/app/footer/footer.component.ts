@@ -1,18 +1,24 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: "app-footer",
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.css"]
 })
 export class FooterComponent implements OnInit {
-
   @Input('data') todos = [];
-  isMore = false;
+  @Output() removeEvent = new EventEmitter<number>() ;
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+  ngOnChang() {
+    console.log('變了變了');
+    // 回家繼續做
   }
-
+  clearBtn() {
+    this.removeEvent.emit();
+    console.log(this.todos);
+  }
 }

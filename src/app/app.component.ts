@@ -13,8 +13,8 @@ export class AppComponent {
   addTodos() {
     if (this.todo) {
       let newTodo = {
-        text : this.todo,
-        done : false,
+        text: this.todo,
+        done: false
       };
       // this.todos.push(newTodo);
       this.todos = this.todos.concat(newTodo);
@@ -22,5 +22,8 @@ export class AppComponent {
       // [...]方式就是展開
       this.todo = '';
     }
+  }
+  removeAllTodo($event){
+    this.todos = this.todos.filter(item => !item.done);
   }
 }
