@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  inputHint= 'What needs to be done? 呀蛤～';
+  todos = [];
+
+  addtodos(value) {
+    console.log('trytryla');
+    this.todos = value;
+  }
 }
