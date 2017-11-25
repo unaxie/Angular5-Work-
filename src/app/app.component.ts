@@ -9,6 +9,7 @@ export class AppComponent {
   inputHint = "What needs to be done? 呀蛤～";
   todos = [];
   todo = '';
+  filterType = 'All';
 
   addTodos() {
     if (this.todo) {
@@ -25,5 +26,8 @@ export class AppComponent {
   }
   removeAllTodo($event){
     this.todos = this.todos.filter(item => !item.done);
+  }
+  filterTypeChang($event){
+    this.filterType = $event;
   }
 }
