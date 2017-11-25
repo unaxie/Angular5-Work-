@@ -20,18 +20,11 @@
           </div>
           <input class="edit" value="Create a TodoMVC template">
         </li>
-        <!-- <li>
-          <div class="view">
-            <input class="toggle" type="checkbox">
-            <label>Buy a unicorn</label>
-            <button class="destroy"></button>
-          </div>
-          <input class="edit" value="Rule the web">
-        </li> -->
+
       </ul>
     </section>
     <!-- This footer should hidden by default and shown when there are todos -->
-    <app-footer *ngIf="todos.length" [data]="todos"></app-footer>
+    <app-footer [data]="todos"></app-footer>
   </section>
   <footer class="info">
     <p>Double-click to edit a todo</p>

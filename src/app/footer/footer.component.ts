@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input('data') item = [];
+  @Input('data') todos = [];
+  isMore = false;
 
   constructor() { }
 

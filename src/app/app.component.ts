@@ -10,19 +10,16 @@ export class AppComponent {
   todos = [];
   todo = '';
 
-  // addTodos(element: HTMLInputElement) {
-  //   // console.log(target.value);
-  //   if (element.value) {
-  //     this.todos.push(element.value);
-  //   }
-  // }
   addTodos() {
     if (this.todo) {
       let newTodo = {
         text : this.todo,
         done : false,
       };
-      this.todos.push(newTodo);
+      // this.todos.push(newTodo);
+      this.todos = this.todos.concat(newTodo);
+      // this.todos = [...this.todos, newTodo];
+      // [...]方式就是展開
       this.todo = '';
     }
   }
